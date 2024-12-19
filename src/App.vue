@@ -1,6 +1,7 @@
 <script setup>
 import { ref, onMounted } from "vue";
 import axios from "axios";
+import BudgetService from "./components/BudgetSummary.vue";
 
 const items = ref([]); // Holds the fetched items
 const newItem = ref({ name: "", price: "", category: "" }); // Holds new item form data
@@ -52,6 +53,7 @@ onMounted(fetchItems);
 </script>
 
 <template>
+  <BudgetService></BudgetService>
   <div>
     <h1>Item List</h1>
 
